@@ -4,6 +4,7 @@
 
 
 ```
+using GPLVMplus
 using GPLVMplusData # must be independently installed
 
 X = GPLVMplusData.loadducks(;every=4); # load rubber duck images in 32x32 resolution
