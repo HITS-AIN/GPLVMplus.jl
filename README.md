@@ -30,3 +30,27 @@ plot(result[:Z][1,:],result[:Z][2,:],"o")
 ```
 
 ## Experiment 2
+
+```
+using GPLVMplus
+using GPLVMplusData # must be independently installed
+using Random
+
+X = GPLVMplusData.loadducks(;every=4); # load rubber duck images in 32x32 resolution
+
+# warmup
+let
+    gplvmplus(X; Q = 2, iterations = 1)
+end
+
+# Instantiate random number generator
+rng = MersenneTwister(1);
+
+# Sample 72 scaling coefficients between 0.5 and 2.5
+C = rand(rng, 72)*2 .+ 0.5;
+
+# Scale each image with the corresponding scaling coefficients
+Xscale = reduce(hcat, [x*c for (x,c) in zip(eachcol(X),C)]);
+
+# Learn mapping from Q=2 latent dimensions to high-dimensional scaled images.
+result2 = gplvmplus(Xscale; Q = 2, H1 = 20, H2 = 20, iterations = 5000);
