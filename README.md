@@ -2,6 +2,10 @@
 
 Implementation of the $\mbox{GPLVM}_+$ model presented in *Positive and Scale Invariant Gaussian Process Latent Variable Model for Astronomical Spectra, ESANN 2024*.
 
+Below we show an example of how to use the model with a dataset of 72 images that are made available via the package GPLVMplusData.jl. 
+
+## Experiment 1
+
 ```
 using GPLVMplus
 using GPLVMplusData # must be independently installed
@@ -21,3 +25,5 @@ result = gplvmplus(X; Q = 2, H1 = 20, H2 = 20, iterations = 5000);
 using PyPlot # must be independently installed
 plot(result[:Z][1,:],result[:Z][2,:],"o")
 ```
+
+## Experiment 2
