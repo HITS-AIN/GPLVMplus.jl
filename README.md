@@ -7,6 +7,7 @@ Below we show two examples of how to use the model with a dataset of 72 images t
 ## Experiment 1
 
 In this experiment we run the model on the downsampled images setting the low-dimensional space to $Q=2$ dimensions.
+We further specify the number of neurons for the neural network that parametrises the variational parameters for the posterior mean of the latent function values: we set the number of neurons in the first layer to 20 neurons with $H_1 = 20$; we also set the number of neurons in the second hidden layer also to 20 neurons with $H_2 = 20$. If $H_2$ is left unspecified, it is automatically set so that $H_2 = H_1$.
 
 ```
 using GPLVMplus
