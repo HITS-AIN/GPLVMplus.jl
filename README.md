@@ -2,7 +2,7 @@
 
 Implementation of the $\mbox{GPLVM}_+$ model presented in *Positive and Scale Invariant Gaussian Process Latent Variable Model for Astronomical Spectra, ESANN 2024*.
 
-Below we show two examples of how to use the model with a dataset of 72 images that are made available via the package [GPLVMplusData.jl](https://github.com/HITS-AIN/GPLVMplusData.jl). 
+Below we show two examples of how to use the model. The experiments demonstrate the use of the model with a dataset of 72 images that are made available via the package [GPLVMplusData.jl](https://github.com/HITS-AIN/GPLVMplusData.jl). The 72 images are images of a rubber duck photographed from 72 angles, thus they form a latent space that is intrinsically a one-dimensional circle. We show in the experiments below that the model successfully discovers this latent space. 
 
 ## Experiment 1
 
