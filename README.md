@@ -1,4 +1,4 @@
-# GPLVMplus
+# $\mbox{GPLVM}_+$
 
 Implementation of the $\mbox{GPLVM}_+$ model presented in *Positive and Scale Invariant Gaussian Process Latent Variable Model for Astronomical Spectra, ESANN 2024*.
 
