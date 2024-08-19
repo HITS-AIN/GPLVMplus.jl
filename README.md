@@ -12,6 +12,8 @@ We further specify the number of neurons for the neural network that parametrise
 ```
 using GPLVMplus
 using GPLVMplusData # must be independently installed
+using PyPlot # must be independently installed.
+             # Other plotting packages can be used instead
 
 X = GPLVMplusData.loadducks(;every=4); # load rubber duck images in 32x32 resolution
 
@@ -24,8 +26,7 @@ end
 # Use a two-hidden layer neural network for amortised inference. 
 result = gplvmplus(X; Q = 2, H1 = 20, H2 = 20, iterations = 5000);
 
-# Plot latent coordinates
-using PyPlot # must be independently installed
+# Plot latent 2-dimensional projections
 plot(result[:Z][1,:],result[:Z][2,:],"o")
 ```
 
@@ -34,6 +35,8 @@ plot(result[:Z][1,:],result[:Z][2,:],"o")
 ```
 using GPLVMplus
 using GPLVMplusData # must be independently installed
+using PyPlot # must be independently installed.
+             # Other plotting packages can be used instead
 using Random
 
 X = GPLVMplusData.loadducks(;every=4); # load rubber duck images in 32x32 resolution
@@ -54,3 +57,14 @@ Xscale = reduce(hcat, [x*c for (x,c) in zip(eachcol(X),C)]);
 
 # Learn mapping from Q=2 latent dimensions to high-dimensional scaled images.
 result2 = gplvmplus(Xscale; Q = 2, H1 = 20, H2 = 20, iterations = 5000);
+
+# Plot latent 2-dimensional projections
+plot(result[:Z][1,:],result[:Z][2,:],"o")
+
+# Compare inferred scaling coefficients to actual coefficients C
+figure()
+plot(C, label="scaling coefficients C")
+plot(results2[:c], label="inferred scaling coefficients")
+legend()
+```
+
