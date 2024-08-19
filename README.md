@@ -1,7 +1,6 @@
 # GPLVMplus
 
-[![Build Status](https://github.com/ngiann/GPLVMplus.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/ngiann/GPLVMplus.jl/actions/workflows/CI.yml?query=branch%3Amain)
-
+Implementation of the $\mbox{GPLVM}_+$ model presented in *Positive and Scale Invariant Gaussian Process Latent Variable Model for Astronomical Spectra, ESANN 2024*.
 
 ```
 using GPLVMplus
