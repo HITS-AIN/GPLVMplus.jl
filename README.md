@@ -64,7 +64,7 @@ plot(result[:Z][1,:],result[:Z][2,:],"o")
 # Compare inferred scaling coefficients to actual coefficients C
 figure()
 plot(C, label="scaling coefficients C")
-plot(results2[:c], label="inferred scaling coefficients")
+plot(result2[:c], label="inferred scaling coefficients")
 legend()
 ```
 
