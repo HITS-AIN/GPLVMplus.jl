@@ -34,5 +34,7 @@ module GPLVMplus
     include("gplvmplus/unpack_gplvmplus.jl")
     include("gplvmplus/unpack_inferlatent_gplvmplus.jl")
     include("gplvmplus/partial_objective.jl")
+
+    export gplvmplus
     
 end

@@ -15,7 +15,7 @@ end
 
 # Learn mapping from Q=2 latent dimensions to high-dimensional images.
 # Use a two-hidden layer neural network for amortised inference. 
-result = GPLVMplus.gplvmplus(X; Q = 2, H1 = 20, H2 = 20, iterations = 5000);
+result = gplvmplus(X; Q = 2, H1 = 20, H2 = 20, iterations = 5000);
 
 # Plot latent coordinates
 using PyPlot # must be independently installed
