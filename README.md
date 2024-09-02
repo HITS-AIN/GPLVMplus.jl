@@ -1,6 +1,9 @@
 # $\mbox{GPLVM}_+$
 
-Implementation of the $\mbox{GPLVM}_+$ model presented in [Positive and Scale Invariant Gaussian Process Latent Variable Model for Astronomical Spectra, ESANN 2024](https://github.com/ngiann/GPLVMplus.jl/blob/main/ESANN2024.pdf).
+# What is this?
+This is an implementation of the $\mbox{GPLVM}_+$ model presented in [Positive and Scale Invariant Gaussian Process Latent Variable Model for Astronomical Spectra, ESANN 2024](https://github.com/ngiann/GPLVMplus.jl/blob/main/ESANN2024.pdf).
+
+# Installation
 
 Apart from cloning, an easy way of using the package is the following:
 
