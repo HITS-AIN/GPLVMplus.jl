@@ -75,7 +75,7 @@ Xscale = reduce(hcat, [x*c for (x,c) in zip(eachcol(X),C)]);
 result2 = gplvmplus(Xscale; Q = 2, H1 = 20, H2 = 20, iterations = 5000);
 
 # Plot latent 2-dimensional projections
-plot(result[:Z][1,:],result[:Z][2,:],"o")
+plot(result2[:Z][1,:],result2[:Z][2,:],"o")
 
 # Compare inferred scaling coefficients to actual coefficients C
 figure()
