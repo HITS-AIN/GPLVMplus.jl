@@ -84,3 +84,14 @@ plot(result2[:c], label="inferred scaling coefficients")
 legend()
 ```
 
+## Inferring latent projections
+
+Continuing with the example above, we show how to infer the latent coordinate of a high-dimensional data item.
+For convenience, we take one of the images used for training but scale it with an arbitrary constant:
+```
+Xtest = 1.2345 * X[:,1]
+```
+We infer the latent coordinates, and associated scaling coefficient, using:
+```
+Ztest, ctest = inferlatent(Xtest, result2);
+```
