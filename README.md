@@ -11,6 +11,10 @@ Apart from cloning, an easy way of using the package is the following:
 add GPLVMplus
 ```
 
+The following functions are of interest to the end user:
+- `gplvmplus`, see [Experiment 1](#experiment-1).
+- `inferlatent`, see [Inferring latent projections](#inferring-latent-projections).
+  
 # Demonstrations
 
 Below we show two examples of how to use the model. The experiments demonstrate the use of the model with a dataset of 72 images that are made available via the package [GPLVMplusData.jl](https://github.com/HITS-AIN/GPLVMplusData.jl). These 72 images have been taken from the COIL-20 repository that can be found [here](https://www.cs.columbia.edu/CAVE/software/softlib/coil-20.php). The 72 images are images of a rubber duck photographed from 72 angles, thus they form a latent space that is intrinsically a one-dimensional circle. We show in the experiments below that the model successfully discovers this latent space. 
