@@ -17,6 +17,7 @@ add GPLVMplus
 The following functions are of interest to the end user:
 - `gplvmplus`, see [Experiment 1](#experiment-1).
 - `inferlatent`, see [Inferring latent projections](#inferring-latent-projections).
+- `predictivesampler`
   
 # Demonstrations
 
