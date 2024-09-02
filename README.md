@@ -43,6 +43,11 @@ plot(result[:Z][1,:],result[:Z][2,:],"o")
 
 ## Experiment 2
 
+This experiment demonstrates the scale-invariant property of the proposed $\mbox{GPLVM}_{+}$ model.
+We reuse the same dataset of rubber ducks, taken from the [COIL-20 repository]((https://www.cs.columbia.edu/CAVE/software/softlib/coil-20.php).
+This time, however, we first scale the images ny multiplying them with arbitrary positive coefficients.
+The purpose of this experiment is to show that the model can discover the same latent space, as in [experiment 1](#experiment-1).
+
 ```
 using GPLVMplus
 using GPLVMplusData # must be independently installed
