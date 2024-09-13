@@ -109,3 +109,5 @@ Barring local minima  present in the inference of the latent coordinate, variabl
 display(Ztest)
 display(result2[:Z][:,1])
 ```
+
+## Sampling the predictive distribution
