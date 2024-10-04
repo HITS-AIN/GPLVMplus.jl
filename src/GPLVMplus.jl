@@ -2,12 +2,16 @@ module GPLVMplus
 
     using LinearAlgebra, Distributions, Random, Statistics, Distances, LogExpFunctions
     using ExponentialExpectations, FillArrays
-    using ForwardNeuralNetworks
+    # using ForwardNeuralNetworks
     using Printf, PyPlot
     using JLD2
     # using Artifacts, LazyArtifacts
     using Transducers
     using Optimization, OptimizationOptimJL, OptimizationBBO, Zygote#, LineSearches
+
+    # simple neural net
+    include("neuralnets/TwoLayerNetwork.jl")
+    include("neuralnets/ThreeLayerNetwork.jl")
 
     # common
     include("common/covariance.jl" )
