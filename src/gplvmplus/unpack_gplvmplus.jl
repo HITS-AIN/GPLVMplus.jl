@@ -1,6 +1,6 @@
 function unpack_gplvmplus(p, D, N, net, Q)
 
-    nwts = ForwardNeuralNetworks.numweights(net)
+    nwts = numweights(net)
     
     @assert(length(p) == Q*N + 1 + 1 + nwts + N + 2 + N)
 

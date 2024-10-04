@@ -30,7 +30,7 @@ function gplvmplus(X; iterations = 1, H1 = 10, H2 = H1, seed = 1, Q = 2, JITTER 
 
     net = ThreeLayerNetwork(in = Q, H1 = H1, H2 = H2, out=D)
     
-    nwts = ForwardNeuralNetworks.numweights(net)    
+    nwts = numweights(net)    
   
     
     # initialise parameters randomly
