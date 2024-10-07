@@ -111,3 +111,10 @@ display(result2[:Z][:,1])
 ```
 
 ## Sampling the predictive distribution
+
+The following call returns a function `sampler` for sampling from the predictive distribution:
+```
+sampler = GPLVMplus.predictivesampler(Ztest,result2);
+
+pcolor(rot180(reshape(sampler(), 32, 32))); # sample image, reshape it, rotate it and plot it.
+```
